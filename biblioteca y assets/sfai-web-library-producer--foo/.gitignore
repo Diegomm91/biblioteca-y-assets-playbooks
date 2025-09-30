@@ -1,0 +1,79 @@
+# Directories
+node_modules/
+node_modules/*
+dist/
+build/
+.cache/
+.nyc_output/
+coverage/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE - Editors
+.idea/
+.vscode/
+*.sublime*
+*.atom
+*.code-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Sass compiled files
+*.css.map
+*.sass-cache
+
+# Development and Testing
+/DEVELOPMENT
+/TESTING
+
+# Configuration files
+.gitattributes
+
+# Deployment configuration
+.deploy*/
+
+# Bundle
+*.tar
+
+# Firebase
+firebase-debug.log
+firestore-debug.log
+
+config/prod
+
+/venv
+
+/temp
+
+
+build/
+dist/
+node_modules/
+awsconfiguration.json
+.secret-*
+**.sample
+webpack-dist
+
+amplify-backup
+*storybook.log
+
+storybook-static
+
+*.tgz
+
+.secret-*
+**.sample
+#amplify-do-not-edit-end
+
+TMP/*

@@ -1,0 +1,19 @@
+# .prettierignore
+amplify
+amplify-backup
+app/dist
+build
+coverage
+deprecated-static-web
+dist
+node_modules
+temp
+sfai_react_library/src/component_swiper/deprecated
+feature_privacy_policy/impl/FeaturePrivacyPolicyImpl.tsx
+output
+*.html
+*.json
+*.d.ts
+TODO
+storybook-static
+stories

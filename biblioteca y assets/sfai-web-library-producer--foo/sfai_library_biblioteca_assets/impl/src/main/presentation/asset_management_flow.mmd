@@ -1,0 +1,88 @@
+graph TD
+    subgraph Frontend
+        A[UI: Gestión de Assets] --> B{Crear/Editar Asset};
+        B --> C[Formulario de Asset];
+        C --> D[Selección/Subida de Imagen];
+        C --> E[Configuración de Preset UTM];
+        B --> F[Listado de Assets];
+        F --> G{Reutilizar Asset en Campaña};
+    end
+
+    subgraph Backend
+        H[API Gateway/BFF] --> I[Servicio de Assets];
+        I --> J{Validación de Entrada};
+        J --> K{Validación de Imagen (Tipo/Tamaño)};
+        J --> L{Validación de Preset UTM};
+        I --> M{Control de Acceso (RBAC)};
+        I --> N{Aislamiento Multitenant};
+        I --> O{Idempotencia (Idempotency-Key)};
+        I --> P[Almacenamiento de Metadata (DB)];
+        I --> Q[Almacenamiento de Archivos (S3)];
+        I --> R[Servicio de Auditoría];
+        I --> S[Servicio de Campañas];
+    end
+
+    subgraph Base de Datos
+        P --> T[Tabla de Assets];
+        P --> U[Tabla de Presets UTM];
+        R --> V[Tabla de Auditoría];
+    end
+
+    subgraph Almacenamiento de Archivos
+        Q --> W[Bucket S3/Cloud Storage];
+    end
+
+    subgraph Otros Servicios
+        S --> X[Servicio de Campañas: Creación];
+    end
+
+    A --> H;
+    C --> H;
+    D --> H;
+    E --> H;
+    G --> S;
+
+    H --> I;
+    I --> J;
+    J --> K;
+    J --> L;
+    K --> Q;
+    L --> P;
+    M --> I;
+    N --> I;
+    O --> I;
+    I --> P;
+    I --> R;
+    S --> X;
+
+    T --> F;
+    U --> F;
+    V --> F;
+    W --> D;
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px;
+    style B fill:#bbf,stroke:#333,stroke-width:2px;
+    style C fill:#bbf,stroke:#333,stroke-width:2px;
+    style D fill:#bbf,stroke:#333,stroke-width:2px;
+    style E fill:#bbf,stroke:#333,stroke-width:2px;
+    style F fill:#f9f,stroke:#333,stroke-width:2px;
+    style G fill:#bbf,stroke:#333,stroke-width:2px;
+
+    style H fill:#ccf,stroke:#333,stroke-width:2px;
+    style I fill:#ccf,stroke:#333,stroke-width:2px;
+    style J fill:#ccf,stroke:#333,stroke-width:2px;
+    style K fill:#ccf,stroke:#333,stroke-width:2px;
+    style L fill:#ccf,stroke:#333,stroke-width:2px;
+    style M fill:#ccf,stroke:#333,stroke-width:2px;
+    style N fill:#ccf,stroke:#333,stroke-width:2px;
+    style O fill:#ccf,stroke:#333,stroke-width:2px;
+    style P fill:#ccf,stroke:#333,stroke-width:2px;
+    style Q fill:#ccf,stroke:#333,stroke-width:2px;
+    style R fill:#ccf,stroke:#333,stroke-width:2px;
+    style S fill:#ccf,stroke:#333,stroke-width:2px;
+
+    style T fill:#fcf,stroke:#333,stroke-width:2px;
+    style U fill:#fcf,stroke:#333,stroke-width:2px;
+    style V fill:#fcf,stroke:#333,stroke-width:2px;
+    style W fill:#fcf,stroke:#333,stroke-width:2px;
+    style X fill:#ccf,stroke:#333,stroke-width:2px;

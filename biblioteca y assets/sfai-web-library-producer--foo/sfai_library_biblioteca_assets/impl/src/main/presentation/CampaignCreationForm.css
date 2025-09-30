@@ -1,0 +1,95 @@
+.campaign-creation-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #36454F;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1a2b3c;
+}
+
+.campaign-creation-form-container h2 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #CCCCCC;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #36454F;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+  background-color: #1a2b3c;
+}
+
+.form-group select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.7%2C3.7%2C9.7%2C3.7%2C13.4%2C0l110.7-110.7c3.7-3.7%2C9.7-3.7%2C13.4%2C0l110.7%2C110.7c3.7%2C3.7%2C9.7%2C3.7%2C13.4%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px;
+  padding-right: 30px; /* Make space for the arrow */
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #FF4500;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #E03E00;
+}
+@media (max-width: 768px) {
+  .campaign-creation-form-container {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign-creation-form-container {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .campaign-creation-form-container h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input[type="text"],
+  .form-group select,
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

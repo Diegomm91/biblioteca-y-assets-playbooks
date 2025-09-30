@@ -1,0 +1,17 @@
+{
+  "name": "sfai-library-foo",
+  "version": "1.0.6",
+  "description": "SFAI Library Foo",
+  "main": "public/index.js",
+  "types": "public/index.d.ts",
+  "type": "module",
+  "author": "Software Factory AI - SFAI",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./public/index.js",
+      "types": "./public/index.d.ts"
+    }
+  },
+  "dependencies": {}
+}

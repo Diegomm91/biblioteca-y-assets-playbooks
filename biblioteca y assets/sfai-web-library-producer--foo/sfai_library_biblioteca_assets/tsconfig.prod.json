@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+      "paths": {
+        "@sfai-library-mjs/*": ["../sfai_library_mjs/*"],
+        "@sfai-library-nodejs/*": ["../sfai_library_nodejs/*"],
+        "@sfai-library-stub/*": ["../sfai_library_stub/*"],
+        "@shared/*": ["../shared/*"],
+        "@config/*": ["../config/*"],
+        "@sfai-library-foo-impl/*": ["impl/*"],
+        "@sfai-images-env/*": ["impl/res/images/prod/*"]
+      }
+    }
+}

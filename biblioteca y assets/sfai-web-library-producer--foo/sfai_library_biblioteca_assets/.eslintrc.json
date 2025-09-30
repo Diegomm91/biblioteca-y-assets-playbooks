@@ -1,0 +1,67 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+      // Activa el soporte para JSX
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "storybook"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "no-console": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+        // También ignora comentarios para la longitud máxima
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    // Desactiva el requerimiento de tipo de retorno explícito
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "storybook/await-interactions": "off", // TODO: on
+    "storybook/context-in-play-function": "off" // TODO: on
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+    // Añade el entorno de navegador si usas React
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+      // Detecta automáticamente la versión de React para aplicar reglas específicas
+    }
+  },
+  "globals": {
+    "expect": true,
+    "assert": true
+  }
+}

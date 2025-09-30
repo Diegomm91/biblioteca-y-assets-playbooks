@@ -1,0 +1,2 @@
+# Ignore secret manager environment files
+variables/secret-manager/.env*

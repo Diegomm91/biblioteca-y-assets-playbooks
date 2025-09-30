@@ -1,0 +1,137 @@
+.asset-creation-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #36454F;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1a2b3c;
+}
+
+.asset-creation-form-container h2 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #CCCCCC;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.utm-preset-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #36454F;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.utm-preset-item {
+  background-color: #1a2b3c;
+  border: 1px solid #36454F;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.utm-preset-item p {
+  margin: 0;
+  color: #CCCCCC;
+}
+
+.utm-preset-item strong {
+  color: #FFFFFF;
+}
+
+.utm-preset-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #36454F;
+}
+
+.utm-preset-form button {
+  grid-column: 1 / -1; /* Span across all columns */
+  background-color: #FF4500;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.utm-preset-form button:hover {
+  background-color: #E03E00;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #FF4500;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #E03E00;
+}
+@media (max-width: 768px) {
+  .asset-creation-form-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .utm-preset-form {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .asset-creation-form-container {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .asset-creation-form-container h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input[type="text"],
+  .form-group textarea,
+  .utm-preset-form input[type="text"],
+  .utm-preset-form button,
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sfai-library-foo-impl",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/main/presentation/FeatureFoobarImpl.tsx",
+  "types": "src/main/presentation/FeatureFoobarImpl.tsx"
+}

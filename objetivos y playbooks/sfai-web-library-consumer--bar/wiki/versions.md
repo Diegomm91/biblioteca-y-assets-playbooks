@@ -1,0 +1,2 @@
+- library-sfai-foobar-template--web: 0.0.4
+- sfai-web-feature-template: 0.0.1

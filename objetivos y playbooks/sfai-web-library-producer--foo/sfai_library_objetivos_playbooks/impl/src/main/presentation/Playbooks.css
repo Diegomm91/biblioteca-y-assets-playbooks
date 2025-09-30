@@ -1,0 +1,155 @@
+/* Estilos para el componente Playbooks */
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a2b3c; /* Azulado oscuro */
+  font-family: Arial, sans-serif; /* Fuente más amigable */
+}
+
+.playbooks-container {
+  background-color: #1a2b3c; /* Azulado oscuro */
+  color: #e0e0e0; /* Color de texto claro para contraste */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
+  padding: 20px; /* Añadir padding para separar el contenido de los bordes */
+  box-sizing: border-box; /* Incluir padding en el tamaño total */
+}
+
+.campaign-creation-form {
+  max-width: 900px; /* Limitar el ancho para mejor legibilidad */
+  margin: 0 auto; /* Centrar el formulario */
+  padding: 30px;
+  background-color: #2a3b4c; /* Un tono ligeramente más claro para el formulario */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+  color: #ffffff; /* Títulos en blanco */
+  margin-bottom: 20px;
+}
+
+.playbooks-line {
+  border-bottom: 1px solid #4a4a4a; /* Gris plomo oscuro para líneas */
+  padding-bottom: 15px;
+  margin-bottom: 20px; /* Separación entre líneas */
+}
+
+.playbooks-line:last-child {
+  border-bottom: none; /* No hay borde en la última línea */
+  margin-bottom: 0;
+}
+
+.playbooks-button {
+  background-color: #ff6600; /* Naranja chillón */
+  color: #ffffff; /* Letras blancas */
+  border: none;
+  padding: 12px 25px; /* Aumentar padding para botones */
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px; /* Bordes redondeados para botones */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.playbooks-button:hover {
+  background-color: #e65c00; /* Un tono más oscuro al pasar el ratón */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #cccccc;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: calc(100% - 20px); /* Ajustar ancho */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #4a4a4a; /* Borde gris plomo */
+  border-radius: 4px;
+  background-color: #3a4b5c; /* Fondo de inputs más oscuro */
+  color: #e0e0e0;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.warnings, .errors {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.warnings {
+  background-color: #ffcc0033; /* Amarillo suave */
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+}
+
+.errors {
+  background-color: #ff000033; /* Rojo suave */
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
+.warnings h3, .errors h3 {
+  color: inherit;
+  margin-top: 0;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .playbooks-container {
+    padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .campaign-creation-form {
+    padding: 20px; /* Reducir padding del formulario */
+    max-width: 100%; /* Permitir que el formulario ocupe todo el ancho */
+    margin: 0 10px; /* Añadir un pequeño margen lateral */
+  }
+
+  .playbooks-button {
+    width: 100%; /* Botones de ancho completo en móviles */
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .template-selection button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .playbooks-button {
+    padding: 8px;
+  }
+}

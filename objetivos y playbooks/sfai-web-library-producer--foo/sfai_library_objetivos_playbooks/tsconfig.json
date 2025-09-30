@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["node", "react", "react-dom", "jest", "react-redux", "webpack"],
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+    "isolatedModules": false, // WARNING: Keep it in FALSE for avoid errors from external libraries
+    "baseUrl": ".",
+    "strictFunctionTypes": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "allowImportingTsExtensions": false,
+    "emitDeclarationOnly": false,
+    "paths": {
+      "@sfai-library-mjs/*": ["../sfai_library_mjs/*"],
+      "@sfai-library-nodejs/*": ["../sfai_library_nodejs/*"],
+      "@sfai-library-stub/*": ["../sfai_library_stub/*"],
+      "@shared/*": ["../shared/*"],
+      "@config/*": ["../config/*"],
+      "@sfai-library-objetivos-playbooks-impl/*": ["impl/*"]
+    }
+  },
+   "include": [
+    "./impl/**/*",
+    "./open/**/*",
+    "./public/**/*",
+    "./declarations.d.ts",
+    "./images.d.ts",
+    "../sfai_library_mjs/**/*",
+    "../sfai_library_nodejs/**/*",
+    "../sfai_library_stub/**/*",
+  ],
+
+  //  No traspilar los archivos de webpack
+  "exclude": [
+    "config/webpack/**/*",
+    "amplify",
+    "amplify-backup",
+    "app/dist",
+    "coverage",
+    "dist",
+    "node_modules",
+    "deprecated-static-web",
+    "node_modules/**/*",
+    "temp",
+    "sfai_react_library/src/component_swiper/deprecated",
+    "output",
+    "TODO",
+    "storybook-static/**/*",
+  ]
+}
